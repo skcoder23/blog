@@ -6,10 +6,10 @@ const port = process.env.PORT || 4000;
 // middleware 
 app.use(express.json());
 // mongodb connection 
-const getConnection = require('./db/conn');
+const getConnection = require('./conn');
 
 // userSchema 
-const User = require("./model/user.model");
+const User = require("./user.model");
 getConnection();
 
 app.get('/', (req, res) => {
